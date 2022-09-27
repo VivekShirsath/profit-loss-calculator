@@ -7,4 +7,4 @@ This Project takes three inputs , first as initial price second as number of qua
 <li>Javascript</li>
 </ol>
 <h1>Live Link of the Project</h1>
-<a href = "https://profit-loss-js.netlify.app/">Live Project</a>
+<a href = "https://profit-loss-calcjs.netlify.app/">Live Project</a>
