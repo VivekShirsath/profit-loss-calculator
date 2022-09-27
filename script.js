@@ -16,10 +16,11 @@ function calculate() {
       "Please input all values and should be greater than zero.";
   } else {
     if (initialPrice < currentPrice) {
-      let profit = (currentPrice - initialPrice) * quantityNum;
+      initialTotal = initialPrice * quantityNum;
+      currentTotal = currentPrice * quantityNum;
+      let profit = currentTotal - initialTotal;
 
-      let profitPercentage = Math.round((profit / initialPrice) * 100);
-
+      let profitPercentage = Math.round((profit / initialTotal) * 100);
       message.innerText =
         "Congratulations ! You have made profit of " +
         profit +
@@ -27,8 +28,10 @@ function calculate() {
         profitPercentage +
         "%";
     } else if (initialPrice > currentPrice) {
-      let loss = (initialPrice - currentPrice) * quantityNum;
-      let lossPercentage = Math.round((loss / initialPrice) * 100);
+     initialTotal = initialPrice * quantityNum;
+      currentTotal = currentPrice * quantityNum;
+      let loss = initialTotal - currentTotal;
+      let lossPercentage = Math.round((loss / initialTotal) * 100);
       message.innerText =
         "Sorry, you have made loss of " + loss + " at " + lossPercentage + "%";
     } else {
